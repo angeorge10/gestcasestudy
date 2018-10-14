@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Detect Movements</title>
+        <meta name="viewport" content="width=device-width">
+        <script src="libs/gest.js"></script>
+        <script>
+            gest.start();
+            gest.options.subscribeWithCallback(function(gesture) {
+                console.log(gesture);
+                document.getElementsByTagName('h1')[0].innerText = gesture.direction;
+            });
+        </script>
+        <style>
+            h1{
+                text-align:center
+            }
+        </style> 		
+	</head>
+
+	<body>		
+		<h1>Move hand in front of webcam</h1>
+    </body>
+</html>
